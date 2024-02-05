@@ -7,7 +7,6 @@ from TextSummarizer.entity import DataIngestionConfig
 from pathlib import Path
 
 
-
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):
         self.config = config
@@ -35,4 +34,4 @@ class DataIngestion:
         unzip_path = self.config.unzip_dir
         os.makedirs(unzip_path, exist_ok=True)
         with zipfile.ZipFile(self.config.local_data_file, 'r') as zip_ref:
-            zip_ref.extractall(unzip_path)
+            zip_ref.extractall(unzip_path) 
